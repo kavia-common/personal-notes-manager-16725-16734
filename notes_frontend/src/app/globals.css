@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
+/* Light, modern, minimalistic theme using requested colors */
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
+  --color-primary: #1976D2;   /* primary */
+  --color-secondary: #424242; /* secondary (text/dark) */
+  --color-accent: #FFC107;    /* accent */
   --color-background: #FFFFFF;
 }
 
@@ -18,9 +19,19 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--color-background);
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Utility tweaks */
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-primary) 30%, white);
+}
+
+a {
+  color: var(--color-primary);
 }
